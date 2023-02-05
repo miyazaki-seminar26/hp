@@ -1,9 +1,7 @@
-import React from 'react'
-import { AppProps } from 'next/app'
-
-import { MantineProvider } from '@mantine/core'
-
 import '@/styles/tailwind.css'
+import { MantineProvider } from '@mantine/core'
+import { AppProps } from 'next/app'
+import React from 'react'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <MantineProvider
@@ -12,6 +10,14 @@ const App = ({ Component, pageProps }: AppProps) => (
     theme={{
       /** Put your mantine theme override here */
       colorScheme: 'light',
+      fontFamily: 'Inria Sans',
+      fontSizes: {
+        xs: 14,
+        sm: 16,
+        md: 20,
+        lg: 32,
+        xl: 40,
+      },
     }}
   >
     <Component
