@@ -30,8 +30,8 @@ export const AppLayout: FC<Props> = ({ children, pageName }) => {
       </Flex>
 
       <main>
-        <Container mt={84} mx={{ md: '15%', xs: 0 }}>
-          <Center>{children}</Center>
+        <Container mt={84} mx={{ md: 'auto', xs: 0 }}>
+          {children}
         </Container>
       </main>
       <div className='bottom-0 bg-[#323232] sticky w-full top-full'>

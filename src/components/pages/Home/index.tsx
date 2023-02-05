@@ -38,11 +38,11 @@ export const Home: FC = () => (
 
     <Container mr={{ sm: '42%', md: '44%', xl: '46%' }}>
       <div className='hidden md:inline-block absolute -z-10'>
-        <Image src='/right-top-visual.svg' alt='right-top-visual' className='w-[36vw]' />
+        <Image src='/top/right-top-visual.svg' alt='right-top-visual' className='w-[36vw]' />
       </div>
 
       <div className='md:hidden block -mt-12'>
-        <Image src='/sp-top-visual.svg' alt='sp-top-visual' className='' />
+        <Image src='/top/sp-top-visual.svg' alt='sp-top-visual' className='' />
       </div>
     </Container>
   </div>
