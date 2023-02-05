@@ -8,9 +8,7 @@ type Props = {
   pageName: string
 }
 
-export const AppLayout: FC<Props> = (props, pageName) => {
-  const { children } = props
-
+export const AppLayout: FC<Props> = ({ children, pageName }) => {
   return (
     <Box className='h-screen'>
       <Flex className='w-full absolute top-0 justify-between'>
@@ -24,7 +22,7 @@ export const AppLayout: FC<Props> = (props, pageName) => {
           <Image src='/right-header-image.svg' alt='right-header-image' />
         </div>
 
-        {pageName !== 'Home' && (
+        {pageName !== 'HOME' && (
           <div className='absolute right-12 top-12 w-[36vw]'>
             <Image src='/26th.svg' alt='right-header-image' className='opacity-70' />
           </div>
