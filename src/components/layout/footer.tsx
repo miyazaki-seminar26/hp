@@ -12,7 +12,9 @@ export const AppFooter = () => {
         <Anchor className='hover:opacity-80 transition-opacity'>
           <TwitterIcon />
         </Anchor>
-        <Text color='white'>©️miyazaki-seminar 2023</Text>
+        <Text color='white' size='xs' className='flex items-center'>
+          ©️miyazaki-seminar 2023
+        </Text>
       </Flex>
     </footer>
   )
