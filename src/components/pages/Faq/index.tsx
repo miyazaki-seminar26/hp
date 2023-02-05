@@ -23,7 +23,7 @@ const faqLists = [
 export const FAQ: FC = () => {
   return (
     <div className='w-full'>
-      <PageTitle title='FAQ（よくある質問）' />
+      <PageTitle title='FAQ（よくある質問）' withSeminar />
       <QuestionIcon />
 
       <Space h={40} className='relative' />

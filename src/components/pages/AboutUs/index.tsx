@@ -13,9 +13,9 @@ const MemberLists = [
   },
   {
     name: '杉田 彩葉',
-    hobby: '散歩',
-    job: 'スーパーのレジ打ち',
-    club: 'なし',
+    hobby: 'ダンス・ドラム・ディズニー',
+    job: '大学の食堂',
+    club: 'NEXUS',
     image: '2.jpg',
   },
   {
@@ -177,7 +177,7 @@ const MemberLists = [
 export const AboutUs: FC = () => {
   return (
     <div className='w-full'>
-      <PageTitle title='ABOUT US' />
+      <PageTitle title='ABOUT US' withSeminar />
       <Space h={40} />
       <Box className='bg-gray-100 rounded-md px-4 py-2 inline-block'>
         <Text size='lg' weight='bold'>
