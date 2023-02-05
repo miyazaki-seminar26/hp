@@ -1,13 +1,13 @@
-import { Container, Flex, Image, MediaQuery, Text } from '@mantine/core'
+import { Container, Image, MediaQuery, Text } from '@mantine/core'
 import { FC } from 'react'
 
 export const Home: FC = () => (
   <div className='w-full md:flex'>
-    <div className=''>
+    <div>
       <MediaQuery smallerThan='md' styles={{ display: 'none' }}>
         <Text
           size='lg'
-          className='sm:hidden leading-relaxed border-[#323232] border-b-2 inline-block pl-4 pr-20'
+          className='sm:hidden leading-relaxed border-gray-400 border-b-2 inline-block pl-4 pr-20'
           weight='bold'
         >
           経済✖️ITを活かした
@@ -19,7 +19,7 @@ export const Home: FC = () => (
       <MediaQuery largerThan='md' styles={{ display: 'hidden' }}>
         <Text
           size='xl'
-          className='hidden sm:inline-block leading-relaxed border-[#323232] border-b-2 pl-4 pr-20'
+          className='hidden sm:inline-block leading-relaxed border-gray-400 border-b-2 pl-4 pr-20'
           weight='bold'
         >
           経済✖️ITを活かした
