@@ -12,7 +12,9 @@
         "@typescript-eslint",
         "jest",
         "simple-import-sort",
-        "unused-imports"
+        "unused-imports",
+        "simple-import-sort", 
+        "import"
     ],
     "env": {
         "es2021": true,
