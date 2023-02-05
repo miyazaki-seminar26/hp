@@ -5,9 +5,10 @@ import type { FC, ReactNode } from 'react'
 
 type Props = {
   children: ReactNode
+  pageName: string
 }
 
-export const AppLayout: FC<Props> = (props) => {
+export const AppLayout: FC<Props> = (props, pageName) => {
   const { children } = props
 
   return (
@@ -22,6 +23,12 @@ export const AppLayout: FC<Props> = (props) => {
         <div className='absolute top-0 -z-10 right-0 w-[28vw]'>
           <Image src='/right-header-image.svg' alt='right-header-image' />
         </div>
+
+        {pageName !== 'Home' && (
+          <div className='absolute right-12 top-12 w-[36vw]'>
+            <Image src='/26th.svg' alt='right-header-image' className='opacity-70' />
+          </div>
+        )}
       </Flex>
 
       <main>
