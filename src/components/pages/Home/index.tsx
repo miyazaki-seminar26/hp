@@ -1,5 +1,6 @@
-import React, { FC } from 'react'
 
+
+import { FC } from 'react'
 import { Title } from '@mantine/core'
 
 export const Home: FC = () => (
