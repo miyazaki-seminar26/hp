@@ -2,7 +2,14 @@ import { FC } from 'react'
 
 export const QuestionIcon: FC = () => {
   return (
-    <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+    <svg
+      width='80'
+      height='80'
+      className='opacity-10 absolute top-16 left-1/2 -translate-x-1/2 hidden md:inline-block'
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
       <g clip-path='url(#clip0_346_452)'>
         <path
           d='M11.9999 22.909C18.0248 22.909 22.909 18.0248 22.909 11.9999C22.909 5.97499 18.0248 1.09082 11.9999 1.09082C5.97499 1.09082 1.09082 5.97499 1.09082 11.9999C1.09082 18.0248 5.97499 22.909 11.9999 22.909Z'
