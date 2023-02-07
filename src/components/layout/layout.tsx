@@ -35,7 +35,7 @@ export const AppLayout: FC<Props> = ({ children, pageName }) => {
         </Container>
       </main>
       <div className='bottom-0 bg-[#323232] sticky w-full top-full'>
-        <Container mx={{ md: '15%', xs: 0 }}>
+        <Container mx={{ md: 'auto', xs: 0 }}>
           <AppFooter />
         </Container>
       </div>

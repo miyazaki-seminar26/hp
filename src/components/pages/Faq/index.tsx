@@ -68,12 +68,12 @@ export const FAQ: FC = () => {
       <Space h={40} className='relative' />
 
       <div className='flex flex-wrap'>
-        <Center className='invisible md:visible absolute left-1/2'>
-          <div className='h-[68vh] border border-gray-800' />
+        <Center className='hidden md:inline-block absolute left-1/2'>
+          <div className='border border-gray-400 h-[124vh]' />
         </Center>
         {faqLists.map((faq, index) => (
-          <Box key={index} className='w-full md:w-1/2 p-2'>
-            <div className='bg-white py-2 h-48'>
+          <Box key={index} className={`w-full md:w-1/2 py-2 ${index % 2 === 1 && 'md:pl-4'}`}>
+            <div className='bg-white md:h-48'>
               <Text size='md' className='font-bold mb-2'>
                 {faq.question}
               </Text>

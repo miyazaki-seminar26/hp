@@ -214,11 +214,11 @@ export const AboutUs: FC = () => {
         ))}
         <Space h={40} />
       </div>
-      <Box className='bg-gray-100 rounded-md px-4 py-2 inline-block'>
+      <Box className='bg-gray-100 rounded-md p-4 inline-block'>
         <Text size='lg' weight='bold'>
           宮崎ゼミを選んだ理由
         </Text>
-        <List listStyleType='initial' withPadding size='md'>
+        <List listStyleType='initial' withPadding size='md' className='p-2'>
           <List.Item>経済の勉強をしたくなかったから</List.Item>
           <List.Item>プログラミングをしてみたくなったから</List.Item>
           <List.Item>おもしろそう！</List.Item>
