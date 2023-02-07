@@ -1,5 +1,6 @@
 import { ArrowButton } from '@/components/common/ArrowButton'
 import { PageTitle } from '@/components/common/PageTitle'
+import { LINKS } from '@/constants/link'
 import {
   Anchor,
   Badge,
@@ -73,7 +74,17 @@ const elements = [
   },
   {
     left: '演習(ゼミ)紹介',
-    right: <Anchor href='https://www.econ.doshisha.ac.jp/teacher/miyazaki.html'>情報システムの研究</Anchor>,
+    right: (
+      <Anchor
+        variant='text'
+        target='_blank'
+        rel='noopener noreferrer'
+        className='hover:opacity-80 text-blue-400 transition-all'
+        href={LINKS.SEMINAR}
+      >
+        情報システムの研究
+      </Anchor>
+    ),
   },
 ]
 
@@ -181,7 +192,7 @@ export const Home: FC = () => {
         <Space w={100} />
         <div className='flex items-center justify-center flex-col'>
           <Text>その他のメンバーetc</Text>
-          <ArrowButton href='/about-us' />
+          <ArrowButton href={LINKS.ABOUTUS} />
         </div>
       </Flex>
 
@@ -189,7 +200,7 @@ export const Home: FC = () => {
       <PageTitle title='FAQ（よくある質問）' />
       <Flex pt={12} gap={20}>
         <Text>ゼミ選びに迷う学生のために、よく来る質問に答えました。</Text>
-        <ArrowButton href='/faq' />
+        <ArrowButton href={LINKS.FAQ} />
       </Flex>
 
       <Space h={80} />
