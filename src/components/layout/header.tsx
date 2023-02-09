@@ -51,7 +51,7 @@ export const AppHeader: FC = () => {
   return (
     <header>
       <nav>
-        <ul className='flex gap-4 md:gap-8 text-[16px] md:text-xl'>
+        <ul className='flex gap-4 md:gap-8 text-[15px] md:text-xl'>
           {MENU.map((item) => (
             <li key={item.label}>
               <AppLink path={item.href} label={item.label} />

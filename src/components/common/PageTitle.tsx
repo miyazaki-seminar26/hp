@@ -17,7 +17,7 @@ export const PageTitle: FC<Props> = ({ title, withSeminar }) => {
       )}
 
       <MediaQuery smallerThan='md' styles={{ display: 'hidden' }}>
-        <Text size='lg' className='sm:hidden leading-relaxed' weight='bold'>
+        <Text size={28} className='sm:hidden leading-relaxed' weight='bold'>
           {title}
         </Text>
       </MediaQuery>

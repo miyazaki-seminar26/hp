@@ -20,9 +20,9 @@ const MemberLists = [
   },
   {
     name: '山本 新',
-    hobby: '筋トレ・バド・ドライブ',
-    job: 'PM・開発インターン',
-    club: 'プログラミング研究会Tech.Uni・バドミントン同好会',
+    hobby: '筋トレ・ドライブ',
+    job: 'PMインターン',
+    club: 'プログラミング研究会Tech.Uni',
     image: '3.jpg',
   },
   {
@@ -192,7 +192,7 @@ export const AboutUs: FC = () => {
         </List>
       </Box>
       <Space h={40} />
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-4 items-start'>
         {MemberLists.map((member, index) => (
           <div key={index} className='w-full flex items-center justify-center flex-col'>
             <Image
