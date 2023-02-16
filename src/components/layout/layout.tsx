@@ -1,6 +1,6 @@
 import { AppFooter } from './footer'
 import { AppHeader } from './header'
-import { Box, Center, Container, Flex, Image } from '@mantine/core'
+import { Box, Container, Flex, Image } from '@mantine/core'
 import type { FC, ReactNode } from 'react'
 
 type Props = {

@@ -101,7 +101,7 @@ const elements = [
 const cardLists = [
   {
     title: 'それって当たり前ですか？',
-    href: '',
+    href: 'https://common-beta.vercel.app/',
     description:
       '普段気にしない当たり前を再認識することによって、ITを活用した革新的なことを生み出すためのノウハウを学ぶ。',
     image: '/card/common.jpg',
@@ -109,7 +109,7 @@ const cardLists = [
   },
   {
     title: 'HOW TO',
-    href: '',
+    href: 'https://common-blue.vercel.app/',
     description:
       '初学者が大半ながらも、どうやってwebサイトを作成するのかを1から考え、それに26期生自身のオリジナリティを付け加える。',
     image: '/card/hp.jpg',
@@ -163,7 +163,7 @@ export const Home: FC = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-sm sm:max-w-none'>
         {cardLists.map((item) => {
           return (
-            <Anchor href={item.href} variant='text' className='hover:shadow-sm'>
+            <Anchor href={item.href} variant='text' className='hover:shadow-sm' target='_blank'>
               <Card radius='md' withBorder>
                 <Card.Section>
                   <Image src={item.image} height={200} alt='Norway' />
