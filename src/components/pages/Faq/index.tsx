@@ -1,35 +1,33 @@
 import { PageTitle } from '@/components/common/PageTitle'
 import { QuestionIcon } from '@/components/icon/QuestionIcon'
-import { Box, Center, Flex, Space, Text } from '@mantine/core'
+import { Accordion, Anchor, Space, Text, Title } from '@mantine/core'
 import { FC } from 'react'
 
 const faqLists = [
   {
-    question: '1.GPAはどのくらい必要ですか？',
+    question: 'どんな人がゼミにいるか',
+    answer: '肉体派や頭脳派、酒豪からカフェ巡り系女子まで個性豊かなメンバーがそろっています。',
+  },
+  {
+    question: '男女比',
+    answer: '5：2ぐらいだと思います。現役生52名のうち20名が女性です。現3回生は男：女＝15：9です',
+  },
+  {
+    question: '縦・横のつながりはあるか',
+    answer: 'あります。',
+  },
+  {
+    question: '進路実績',
+    answer: '主な就職先と人数は下記の資料(経済学部２年次演習クラス紹介掲載のPowerPoint)をご覧ください。',
+    link: 'https://doshishaacjp-my.sharepoint.com/:p:/g/personal/ji-keijm_mail_doshisha_ac_jp/EWNiSYopXStOpjPm_QZtuEcBobQy9EIs9U6B4ajidV5cuQ?e=p93UZV',
+  },
+  {
+    question: 'どれくらい忙しいか',
     answer:
-      'GPAについては人それぞれです。4.0に近い人から0.5付近の人までいます。ゼミ選考においてはあまりGPAは関係ないと言えます。',
+      '他のゼミに比べると忙しいです。ゼミの時間の他にサブゼミというゼミに向けた準備時間が必要になります。また、最終ゼミ前（一月中旬～二月中旬）はとくに忙しいです。',
   },
   {
-    question: '2.ゼミは忙しいですか？',
-    answer:
-      '他のゼミと比べると忙しいです。ゼミの時間の他にサブゼミというゼミに向けた準備時間が必要になります。また、最終ゼミ前（一月中旬～二月中旬）はとくに忙しいです。',
-  },
-  {
-    question: '3.未経験でもついていけますか？',
-    answer: 'はい。ほとんどの人が未経験の状態でスタートなので安心してください。',
-  },
-  {
-    question: '4.ゼミ生のほとんどがIT系の企業に就職しますか？',
-    answer:
-      '3割はIT系ですが他はさまざまです。ただ、IT企業ではなくてもIT人材として就職する割合はかなり高いです。ITがわかる文系の人材が社会では求められるため、需要は高いです。',
-  },
-  {
-    question: '5.ゼミ生同士、また、授業はどんな雰囲気？',
-    answer:
-      'それぞれ個性が違うため互いを補い合えます。多様性のあるメンバーでそれぞれのカラーがあり、たくさんの意見が飛び交う授業です。',
-  },
-  {
-    question: '6.部活と両立できますか？',
+    question: 'ゼミ内で仲が悪いなどはあるか',
     answer: 'やる気次第。実際に両立している人はいます。',
   },
   {
@@ -67,21 +65,29 @@ export const FAQ: FC = () => {
 
       <Space h={40} className='relative' />
 
-      <div className='flex flex-wrap'>
-        <Center className='hidden md:inline-block absolute left-1/2'>
-          <div className='border border-gray-400 h-[124vh]' />
-        </Center>
+      <Title>ゼミの概要</Title>
+      <Accordion
+        defaultValue='customization'
+        sx={{
+          position: 'relative',
+          zIndex: 1,
+        }}
+      >
         {faqLists.map((faq, index) => (
-          <Box key={index} className={`w-full md:w-1/2 py-2 ${index % 2 === 1 && 'md:pl-4'}`}>
-            <div className='bg-white md:h-48'>
-              <Text size='md' className='font-bold mb-2'>
+          <Accordion.Item value={faq.question} key={index}>
+            <Accordion.Control>
+              <Text size='md' className='font-bold'>
                 {faq.question}
               </Text>
+            </Accordion.Control>
+
+            <Accordion.Panel>
               <Text className='text-gray-600'>{faq.answer}</Text>
-            </div>
-          </Box>
+              {faq.link && <Anchor size='sm'>{faq.link}</Anchor>}
+            </Accordion.Panel>
+          </Accordion.Item>
         ))}
-      </div>
+      </Accordion>
     </div>
   )
 }
