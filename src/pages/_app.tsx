@@ -13,11 +13,11 @@ const App = ({ Component, pageProps }: AppProps) => (
       colorScheme: 'light',
       fontFamily: 'Inria Sans',
       fontSizes: {
-        xs: 14,
-        sm: 16,
-        md: 20,
-        lg: 32,
-        xl: 40,
+        xs: '0.6rem',
+        sm: '0.75rem',
+        md: '0.9rem',
+        lg: '1rem',
+        xl: '1.2rem',
       },
     }}
   >
